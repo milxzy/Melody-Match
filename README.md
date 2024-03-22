@@ -18,6 +18,8 @@ Melody Match harmonizes the worlds of music and romance, offering a unique platf
 - Customizable Profiles
 - Match Reccomendations
 
+![Example Image](cover.png)
+
 
 
 

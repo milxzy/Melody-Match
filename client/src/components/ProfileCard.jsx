@@ -21,30 +21,7 @@ const ProfileCard = ({ name, primaryGenre, genres, subGenres, age, country, prof
 
   return (
     <>
-    {/* <div className='flex justify-center items-center'>
-    <div className='w-50 h-max border-2 border-rose-500 '>
-    <img src={profilePic} className='max-h-22' alt="" />
-      
-      
-      <h1 className='text-center'>{name}, {primaryGenre}</h1>
-      <h3 className="text-center">{subGenres}</h3>
-      <h4 className='text-center'>Age: {age}</h4>
-      <h4 className="text-center">Country: {country}</h4>
 
-      
-    </div>
-    </div> */}
-{/*     
-    <Card align='center' w='25%'>
-      <CardBody>
-        
-        <VStack>
- <Image src={profilePic}></Image>         
-    
-        </VStack>
-      </CardBody>
-    </Card>
- */}
 
 <Box
       maxW="sm"

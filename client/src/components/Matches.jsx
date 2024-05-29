@@ -6,7 +6,6 @@ import { Center, Square, Circle } from '@chakra-ui/react'
 import { Button, ButtonGroup } from '@chakra-ui/react'
 import { Stack, HStack, VStack, Flex, Text, Spinner, Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalFooter, ModalCloseButton } from '@chakra-ui/react'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-// import { userInfo } from "os";
 
 
 
@@ -84,25 +83,6 @@ const Matches = () => {
         setLoading(false); // Set loading to false in case of error
     }
 
-      // try {
-      //   fetch(
-      //     'http://localhost:4000/GetUsers', {
-      //       method: "GET",
-      //       headers: {
-      //         "Content-Type": "application/json",
-      //       },
-
-
-         
-      //     },
-      //     )
-      //   .then((response) => response.json())
-      //   .then((data) => setMatches(data.users))
-      //   .then((data) => console.log(data))
-      //   .catch((error) => console.error('Error fetching users:', error));
-      // } catch (error) {
-      //   console.error('error fetching user profiles', error)
-      // }
     }
 
     fetchUserProfiles()

@@ -64,37 +64,7 @@ const navigate = useNavigate()
             
           }
          })
-          //  .then((res) => res.json())
-          //  .then((data) => {
-          //    console.log(data)
-          //    const age = data.age
-          //    const artists = data.artists
-          //    const contact_info = data.contact_info
-          //    const country = data.country
-          //    const email = data.email
-          //    const gender = data.gender
-          //    const genres = data.genres
-          //    const preferred_name = data.preferred_name
-          //    const spotify_display_name = data.spotify_display_name
-          //    const spotify_id = data.spotify_id
 
-          //    console.log(email)
-          //    setAgeState(age)
-          //    setArtistState(artists)
-          //    setContactInfoState(contact_info)
-          //    setCountryState(country)
-          //    setEmailState(email)
-          //    setGenderState(gender)
-          //    setGenreState(genres)
-          //    setPreferredNameState(preferred_name)
-          //    setSpotifyDisplayNameState(spotify_display_name)
-          //    setSpotifyIdState(spotify_id)
-
-          //  })
-          //  .catch((error) => {
-          //    window.alert(error);
-          //    return;
-          // });
       }
     }
      checkDB()
@@ -105,12 +75,6 @@ const navigate = useNavigate()
      console.log(ageState, artistState, contactInfoState, countryState, contactInfoState, countryState,
        emailState, genderState, genreState, preferredNameState, spotifyDisplayNameState, spotifyIdState )
        console.log('Ultimate state' + ultimateState)
-    //    if(ultimateState == []){
-    //    navigate('/welcome')
-    //  } else {
-    //   //  navigate('/profile', {state: {sharedVariable}} )
-    //    navigate('/profile')
-    //  }
 
    }, [spotifyIdState])
 
@@ -122,9 +86,6 @@ const navigate = useNavigate()
   );
 };
 
-//idea here
-//make spotify fetch request to get spotify username
-//search db for the username :::::: DONE
-//if match, go to home. if no match, go to welcome :::::: DO NOW
+
 
 export default Standby;

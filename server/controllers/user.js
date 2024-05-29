@@ -45,39 +45,9 @@ export const getUser = async (req, res) => {
        }
 };
 
-export const deleteDatabase = async (req, res) => {
 
-  console.log('mock delete')
-}
 
-export const deleteUser = async (req, res) => { 
-    try{
-        const id = req.params.id
-        
-       await Player.deleteOne({ name: id })
-        res.json('Deleted player')    
-      } catch (err) {
-        res.status(500).json({ message: err.message })
-      }
-};
 
-export const updateUser =  async (req, res) => {
-     // finds the player. The purpose of the 2 lines of code below is 
-  // to create a variable called id, and have that set to a part of the url
-  // then, create a new variable called player, that finds the player with
-  // the name from the url
-  const id = req.params.id
-  const player = await Player.find({ name: id })
-
-  // findOneAndUpdate finds the first focument that matches a filter
-  // applies an update, and returns the document 
-  const filter = { name: id };
-  const update = { earnings: req.body.earnings, server: req.body.server };
-  const updatedPlayer = await Player.findOneAndUpdate(filter, update, {
-    new: true
-  });
-  res.json(updatedPlayer)
-};
 
 
 export const displayDashboard = async (req, res) => {
@@ -151,16 +121,7 @@ export const callback = async (req, res) => {
 }
 
 export const addUserInfo = async (req, res) => {
-//   let db_connect = dbo.getDb();
-//  let myobj = {
-//    name: req.body.name,
-//    position: req.body.position,
-//    level: req.body.level,
-//  };
-//  db_connect.collection("records").insertOne(myobj, function (err, res) {
-//    if (err) throw err;
-//    response.json(res);
-//  });
+
 console.log('added user info: ' + req.body)
 let someData = JSON.stringify(req.body)
 let parsedData = JSON.parse(someData)
@@ -213,25 +174,7 @@ export const addSpotifyData = async (req, res) => {
   }
 }
 
-export const createSpotifyUser = async (req, res) => {
 
-  console.log('test')
-  
-
-  // const user = new User({
-  //   spotify_id: spotifyId,
-  //   email: email,
-  //   spotify_display_name:spotifyDisplayName,
-  //   country:country
-    
-  // }) 
-  // try {
-  //   const newUser = await user.save()
-  //   res.status(201).json(newUser)
-  // } catch (err) {
-  //   res.status(400).json({ message: err.message });
-  // }
-}
 
 export const addSpotifyArtists = async (req, res) => {
   console.log(req.body)
@@ -246,24 +189,10 @@ export const addSpotifyArtists = async (req, res) => {
   }
 }
 
-export const record = async (req, res) => {
-  try{
-    const trial = await Trial.find()
-    res.json(trial)
-  } catch (err) {}
-}
+
 
 export const databaseLookup = async (req, res) => {
-  // console.log('backend working')
-  // const searchTerm = req.query.keyword
-  // console.log(`${searchTerm} is the searchTerm`)
-  // console.log('Request query:', req.query.keyword);
-  // if (!searchTerm) {
-  //   return res.status(400).json({ error: 'Missing keyword parameter' });
-  // }
 
-  // const result = await User.find({ spotify_id: searchTerm })
-  // res.json(result[0])
 
 console.log('backend working')
 const searchTerm = req.query.keyword

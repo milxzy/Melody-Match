@@ -5,7 +5,6 @@ import { ChakraProvider } from '@chakra-ui/react'
 import * as ReactDOM from 'react-dom/client'
 import Login from "./components/Login";
 import Welcome from "./components/Welcome";
-import Home from "./components/Home";
 import ProfileQuestion from "./components/ProfileQuestion.jsx";
 import Profile from "./components/Profile";
 import SpotifyWebApi from "spotify-web-api-js";
@@ -60,8 +59,7 @@ function App() {
           <Route path="/beregister" element={<BeRegister />}></Route>
           <Route path ="/matcheslist" element={<MatchesList />}></Route>
           <Route path="/spotify" element={<Login />}></Route>
-          <Route path="/home" element={<Home />}></Route>
-          <Route path="/welcome" element={<Welcome />}></Route>
+                   <Route path="/welcome" element={<Welcome />}></Route>
           <Route path="/profilequestion" element={<ProfileQuestion />}></Route>
           <Route path="/profile" element={<Profile />}></Route>
           <Route path="/standby" element={<Standby />}></Route>
@@ -74,12 +72,6 @@ function App() {
 }
 
 
-//suggested flow
-//user sees home page
-//user logs in with spotify
-//app searches for spotify name in database     MAKE THIS HAPPEN
-//if user is found return the user homepage
-//if user is not found finish sign up
-// return page with matches
+
 
 export default App;

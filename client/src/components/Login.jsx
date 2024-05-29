@@ -1,5 +1,5 @@
 import React from 'react'
-import './Login.css'
+
 import { loginUrl } from '../spotify'
 import { Button, ButtonGroup } from '@chakra-ui/react'
 import { Center, Square, Circle } from '@chakra-ui/react'

@@ -2,7 +2,7 @@ import express from 'express';
 import passport from 'passport';
 import jwt from 'jsonwebtoken';
 
-import { backendLogin,  makeAUser, registerUser, like, getUsers, createUser, getUser, deleteUser, deleteDatabase, getSingleUser, createSpotifyUser, databaseLookup, record, addSpotifyArtists, addUserInfo, addSpotifyData, updateUser, displayDashboard, getMatches } from '../controllers/user.js';
+import { backendLogin,  makeAUser, registerUser, like, getUsers, createUser, getUser, getSingleUser, databaseLookup, addSpotifyArtists, addUserInfo, addSpotifyData, displayDashboard, getMatches } from '../controllers/user.js';
 
 const router = express.Router();
 
@@ -31,8 +31,7 @@ router.post('/like', like)
 
 router.get('/dashboard', displayDashboard)
 router.get('/getMatches/:userId', getMatches)
-router.get('/record', record)
-router.get('/createSpotifyUser', createSpotifyUser)
+
 router.post('/addUserInfo', addUserInfo)
 router.post('/addSpotifyData', addSpotifyData)
 router.post('/addSpotifyArtists', addSpotifyArtists)
